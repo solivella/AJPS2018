@@ -1,0 +1,13 @@
+#!/bin/bash
+#BSUB -J CONTEST
+#BSUB -o CONTEST.out
+#BSUB -e CONTEST.err
+#BSUB -B
+#BSUB -N 
+#BSUB -u olivella@miami.edu
+#BSUB -W 48:00
+#BSUB -q general
+#BSUB -n 101
+module load intel
+module load openmpi
+mpiexec ./(4)Analysis_section_5_1.R
